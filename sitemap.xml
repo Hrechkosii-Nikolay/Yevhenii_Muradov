@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace example.com with the production domain and regenerate before launch. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://example.com/</loc></url>
+  <url><loc>https://example.com/uk/</loc></url>
+  <url><loc>https://example.com/uk/about/</loc></url>
+  <url><loc>https://example.com/uk/services/</loc></url>
+  <url><loc>https://example.com/uk/services/jewelry/</loc></url>
+  <url><loc>https://example.com/uk/services/metal-casting/</loc></url>
+  <url><loc>https://example.com/uk/services/3d-printing/</loc></url>
+  <url><loc>https://example.com/uk/services/3d-modeling/</loc></url>
+  <url><loc>https://example.com/uk/services/cnc-laser/</loc></url>
+  <url><loc>https://example.com/uk/services/sculpture/</loc></url>
+  <url><loc>https://example.com/uk/portfolio/</loc></url>
+  <url><loc>https://example.com/uk/portfolio/wolf-pendant/</loc></url>
+  <url><loc>https://example.com/uk/portfolio/expressive-jewelry/</loc></url>
+  <url><loc>https://example.com/uk/portfolio/mcgregor-sculpture/</loc></url>
+  <url><loc>https://example.com/uk/portfolio/hammond-bust/</loc></url>
+  <url><loc>https://example.com/uk/portfolio/architecture-model/</loc></url>
+  <url><loc>https://example.com/uk/portfolio/decorative-pavilion/</loc></url>
+  <url><loc>https://example.com/uk/process/</loc></url>
+  <url><loc>https://example.com/uk/privacy/</loc></url>
+  <url><loc>https://example.com/en/</loc></url>
+  <url><loc>https://example.com/en/about/</loc></url>
+  <url><loc>https://example.com/en/services/</loc></url>
+  <url><loc>https://example.com/en/services/jewelry/</loc></url>
+  <url><loc>https://example.com/en/services/metal-casting/</loc></url>
+  <url><loc>https://example.com/en/services/3d-printing/</loc></url>
+  <url><loc>https://example.com/en/services/3d-modeling/</loc></url>
+  <url><loc>https://example.com/en/services/cnc-laser/</loc></url>
+  <url><loc>https://example.com/en/services/sculpture/</loc></url>
+  <url><loc>https://example.com/en/portfolio/</loc></url>
+  <url><loc>https://example.com/en/portfolio/wolf-pendant/</loc></url>
+  <url><loc>https://example.com/en/portfolio/expressive-jewelry/</loc></url>
+  <url><loc>https://example.com/en/portfolio/mcgregor-sculpture/</loc></url>
+  <url><loc>https://example.com/en/portfolio/hammond-bust/</loc></url>
+  <url><loc>https://example.com/en/portfolio/architecture-model/</loc></url>
+  <url><loc>https://example.com/en/portfolio/decorative-pavilion/</loc></url>
+  <url><loc>https://example.com/en/process/</loc></url>
+  <url><loc>https://example.com/en/privacy/</loc></url>
+</urlset>
