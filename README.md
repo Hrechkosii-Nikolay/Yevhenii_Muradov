@@ -83,7 +83,7 @@ assets/img/brand/hero-wolf.webp
 1. Підтвердити домен і доступну версію PHP (рекомендовано PHP 8.1+).
 2. Перевірити наявність PHP cURL і HTTPS.
 3. Налаштувати Telegram credentials поза webroot.
-4. Замінити `example.com` у `robots.txt` та `sitemap.xml`.
+4. Для іншого домену оновити `PUBLIC_SITE` у `tools/build_site.py` та URL sitemap у `robots.txt`.
 5. Додати production canonical та абсолютні `hreflang` після визначення домену.
 6. Завершити юридичні реквізити політики конфіденційності.
 7. Перевірити контакти, назви й технічні описи.

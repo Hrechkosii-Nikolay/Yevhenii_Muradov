@@ -19,9 +19,10 @@
   }[language];
 
   let csrfToken = '';
+  const csrfEndpoint = new URL('csrf.php', forms[0].action).href;
   const refreshToken = async () => {
     try {
-      const response = await fetch('/api/csrf.php', {
+      const response = await fetch(csrfEndpoint, {
         credentials: 'same-origin',
         headers: { Accept: 'application/json' }
       });

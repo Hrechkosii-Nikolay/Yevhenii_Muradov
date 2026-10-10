@@ -3,10 +3,15 @@
 
 from pathlib import Path
 from html import escape
+import re
 from urllib.parse import quote_plus
 from format_html import format_html
 
 ROOT = Path(__file__).resolve().parents[1]
+PUBLIC_SITE = "https://hrechkosii-nikolay.github.io/Yevhenii_Muradov"
+LOCAL_URL_PATTERN = re.compile(
+    r'(?P<prefix>\b(?:href|src|action|content)=["\'])(?P<url>/(?:assets|uk|en|api)/[^"\']*)'
+)
 
 COPY = {
     "uk": {
@@ -92,11 +97,22 @@ def path_for(lang, section="", slug=""):
     if slug: parts.append(slug)
     return "/" + "/".join(parts) + "/"
 
+def portable_paths(path, content):
+    """Make repository-local URLs work at any hosting path and on localhost."""
+    depth = len(Path(path).parent.parts)
+    root_prefix = "../" * depth
+    return LOCAL_URL_PATTERN.sub(
+        lambda match: f'{match.group("prefix")}{root_prefix}{match.group("url").lstrip("/")}',
+        content,
+    )
+
+
 def write(path, content):
     target = ROOT / path
     target.parent.mkdir(parents=True, exist_ok=True)
     if target.suffix == ".html":
         content = format_html(content)
+        content = portable_paths(path, content)
     target.write_text(content, encoding="utf-8")
 
 def contact_icon(kind):
@@ -288,9 +304,8 @@ def sitemap_template():
         paths.append(f"/{lang}/portfolio/")
         paths.extend(path_for(lang, "portfolio", slug) for slug in PROJECTS)
         paths.extend([f"/{lang}/process/", f"/{lang}/privacy/"])
-    urls = "\n".join(f"  <url><loc>https://example.com{path}</loc></url>" for path in paths)
+    urls = "\n".join(f"  <url><loc>{PUBLIC_SITE}{path}</loc></url>" for path in paths)
     return f'''<?xml version="1.0" encoding="UTF-8"?>
-<!-- Replace example.com with the production domain and regenerate before launch. -->
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 {urls}
 </urlset>
